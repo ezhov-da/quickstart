@@ -9,7 +9,7 @@ include::../shared-doc/attributes.adoc[]
 The `jaxws-addressing` quickstart is a working example of the web service using WS-Addressing.
 
 :standalone-server-type: default
-:archiveType: war
+:archiveType: jar
 // Override the archive directory
 :archiveDir: {artifactId}/service/target
 // Override the archive name
@@ -64,11 +64,21 @@ Hello World!
 // Undeploy the Quickstart
 include::../shared-doc/undeploy-the-quickstart.adoc[leveloffset=+1]
 
-// Run the Quickstart in Red Hat JBoss Developer Studio or Eclipse
+// Run the Quickstart in Red Hat Developer Studio or Eclipse
 include::../shared-doc/run-the-quickstart-in-jboss-developer-studio.adoc[leveloffset=+1]
 
-// Additional JBoss Developer Studio instructions
+// Additional Red Hat Developer Studio instructions
 For this quickstart, follow the special instructions to link:{useEclipseDeployJavaClientDocUrl}[Deploy and Undeploy a Quickstart Containing Server and Java Client Projects]
+
+[NOTE]
+====
+When you import this quickstart into {JBDSProductName}, you will see the following warning:
+[source]
+----
+WS-I: A problem occured while running the WS-I WSDL conformance check: org.eclipse.wst.wsi.internal.analyzer.WSIAnalyzerException: The WS-I Test Assertion Document (TAD)document was either not found or could not be processed.The WSDLAnalyzer was unable to validate the given WSDL File.
+----
+This is a known Eclipse issue. For more information, see Eclipse Bugzilla - https://bugs.eclipse.org/bugs/show_bug.cgi?id=535813[Bug 535813].
+====
 
 . To build all of the artifacts, right-click on the *{artifactId}* parent project, and choose *Run As* –> *Maven install*.
 . To deploy the service:
@@ -78,6 +88,7 @@ For this quickstart, follow the special instructions to link:{useEclipseDeployJa
 ** You also see the "404 - Not Found" error in the application window. This is because there is no user interface for this quickstart. You can ignore this error.
 . To access the application:
 ** Right-click on the *{artifactId}-client* subproject and choose *Run As* –> *Java Application*.
+** Choose the *AddressingClient* class and click *OK*.
 ** You should see the following message in the *Console* tab:
 +
 [source,options="nowrap"]

@@ -25,7 +25,7 @@
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
         -->
-        <version>15.0.0.Alpha1-SNAPSHOT</version>
+        <version>16.0.0.Beta1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -74,20 +74,6 @@
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <!--
-                  <configuration>
-                    <before-deployment>
-                        <scripts>
-                            <script>configure-security-domain.cli</script>
-                        </scripts>
-                    </before-deployment>
-                    <after-deployment>
-                        <scripts>
-                            <script>remove-security-domain.cli</script>
-                        </scripts>
-                    </after-deployment>
-                </configuration>
-                -->
             </plugin>
         </plugins>
     </build>

@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.wildfly.quickstarts</groupId>
         <artifactId>jaxws-ejb</artifactId>
-        <version>15.0.0.Alpha1-SNAPSHOT</version>
+        <version>16.0.0.Beta1-SNAPSHOT</version>
     </parent>
     <artifactId>jaxws-ejb-client</artifactId>
     <packaging>jar</packaging>
@@ -44,9 +44,9 @@
             <classifier>classes</classifier>
         </dependency>
         <dependency>
-            <groupId>org.jboss.ws.cxf</groupId>
-            <artifactId>jbossws-cxf-client</artifactId>
-            <version>${version.org.jboss.ws.cxf}</version>
+            <groupId>org.wildfly</groupId>
+            <artifactId>wildfly-jaxws-client-bom</artifactId>
+            <type>pom</type>
         </dependency>
     </dependencies>
 

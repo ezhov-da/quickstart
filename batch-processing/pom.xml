@@ -25,7 +25,7 @@
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
         -->
-        <version>15.0.0.Alpha1-SNAPSHOT</version>
+        <version>16.0.0.Beta1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -33,6 +33,14 @@
     <packaging>war</packaging>
     <name>Quickstart: batch-processing</name>
     <description>Shows how to use a Chunk oriented batch processing</description>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <dependencies>
 
@@ -45,12 +53,6 @@
         </dependency>
 
         <!-- Now we declare any tools needed -->
-
-        <!-- We use commons lang to generate random Strings -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
 
         <!-- Annotation processor to generate the JPA metamodel classes for
             typesafe criteria queries -->

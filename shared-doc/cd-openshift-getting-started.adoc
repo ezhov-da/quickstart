@@ -1,5 +1,5 @@
 [[getting_started_with_openshift]]
-= Getting Started with OpenShift
+= Getting Started with {xpaasproduct-shortname}
 
 This document contains the basic instructions to build and deploy this quickstart to {xpaasproduct-shortname} or {xpaasproductOpenShiftOnline-shortname}.
 

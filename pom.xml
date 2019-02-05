@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.jboss</groupId>
         <artifactId>jboss-parent</artifactId>
-        <version>28</version>
+        <version>29</version>
     </parent>
 
     <groupId>org.wildfly.quickstarts</groupId>
@@ -30,7 +30,7 @@
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
         -->
-    <version>15.0.0.Alpha1-SNAPSHOT</version>
+    <version>16.0.0.Beta1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -51,7 +51,7 @@
         <jboss.home.name>WILDFLY_HOME</jboss.home.name>
         <product.name>WildFly</product.name>
         <!-- A base list of dependency and plug-in version used in the various quick starts. -->
-        <version.wildfly.maven.plugin>1.2.1.Final</version.wildfly.maven.plugin>
+        <version.wildfly.maven.plugin>2.0.0.Final</version.wildfly.maven.plugin>
         <version.org.wildfly.checkstyle-config>1.0.7.Final</version.org.wildfly.checkstyle-config>
         <version.org.wildfly.quickstarts.documentation.plugin>2.0.0.Beta1</version.org.wildfly.quickstarts.documentation.plugin>
         <!-- other plug-in versions -->
@@ -63,24 +63,23 @@
             filtered resources, i.e. build is platform dependent! -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- Version of BOMs -->
-        <version.server.bom>14.0.1.Final</version.server.bom>
+        <!-- Version of BOMs
+        note: a SNAPSHOT version *requires* checkout of BOMs at https://github.com/wildfly/boms and build through "mvn clean install"
+        -->
+        <version.server.bom>16.0.0.Beta1-SNAPSHOT</version.server.bom>
 
         <!-- Versions of dependencies on server's core -->
         <version.commons-io>2.5</version.commons-io>
-        <version.org.apache.httpcomponents.httpclient>4.5.2</version.org.apache.httpcomponents.httpclient>
-        <version.org.jboss.msc.jboss-msc>1.4.3.Final</version.org.jboss.msc.jboss-msc>
+        <version.org.apache.httpcomponents.httpclient>4.5.4</version.org.apache.httpcomponents.httpclient>
+        <version.org.jboss.msc.jboss-msc>1.4.5.Final</version.org.jboss.msc.jboss-msc>
         <version.org.slf4j>1.7.22.jbossorg-1</version.org.slf4j>
 
         <!-- Versions of dependencies on server -->
         <version.com.fasterxml.jackson>2.9.5</version.com.fasterxml.jackson>
         <version.com.h2database>1.4.193</version.com.h2database>
-        <version.com.sun.istack>3.0.5</version.com.sun.istack>
-        <version.commons-lang3>3.6</version.commons-lang3>
+        <version.com.sun.istack>3.0.7</version.com.sun.istack>
         <version.org.bouncycastle>1.60</version.org.bouncycastle>
         <version.org.javassist>3.23.1-GA</version.org.javassist>
-        <version.org.jboss.ws.cxf>5.2.3.Final</version.org.jboss.ws.cxf>
-        <version.picketlink>2.5.5.SP12</version.picketlink>
 
         <!-- Other versions of dependencies -->
         <version.arquillian.angularjs.graphene>1.2.0.Beta1</version.arquillian.angularjs.graphene>
@@ -102,25 +101,6 @@
     <dependencyManagement>
         <dependencies>
 
-            <dependency>
-                <groupId>org.wildfly</groupId>
-                <artifactId>wildfly-ejb-client-bom</artifactId>
-                <version>${version.server.bom}</version>
-                <type>pom</type>
-            </dependency>
-
-            <dependency>
-                <groupId>org.wildfly</groupId>
-                <artifactId>wildfly-jms-client-bom</artifactId>
-                <version>${version.server.bom}</version>
-                <type>pom</type>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${version.commons-lang3}</version>
-            </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
@@ -419,6 +399,7 @@
                 <module>deltaspike-authorization</module>
                 <module>deltaspike-beanbuilder</module>
                 <module>deltaspike-projectstage</module>
+                <module>ee-security</module>
                 <module>ejb-asynchronous</module>
                 <module>ejb-in-ear</module>
                 <module>ejb-in-war</module>
