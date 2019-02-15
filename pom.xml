@@ -15,7 +15,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -53,7 +54,8 @@
         <!-- A base list of dependency and plug-in version used in the various quick starts. -->
         <version.wildfly.maven.plugin>2.0.0.Final</version.wildfly.maven.plugin>
         <version.org.wildfly.checkstyle-config>1.0.7.Final</version.org.wildfly.checkstyle-config>
-        <version.org.wildfly.quickstarts.documentation.plugin>2.0.0.Beta1</version.org.wildfly.quickstarts.documentation.plugin>
+        <version.org.wildfly.quickstarts.documentation.plugin>2.0.0.Beta1
+        </version.org.wildfly.quickstarts.documentation.plugin>
         <!-- other plug-in versions -->
         <version.com.mycyla.license>3.0</version.com.mycyla.license>
         <version.checkstyle>8.5</version.checkstyle>
@@ -66,7 +68,9 @@
         <!-- Version of BOMs
         note: a SNAPSHOT version *requires* checkout of BOMs at https://github.com/wildfly/boms and build through "mvn clean install"
         -->
-        <version.server.bom>16.0.0.Beta1-SNAPSHOT</version.server.bom>
+        <!--<version.server.bom>16.0.0.Beta1-SNAPSHOT</version.server.bom>-->
+        <version.server.bom>15.0.1.Final</version.server.bom>
+
 
         <!-- Versions of dependencies on server's core -->
         <version.commons-io>2.5</version.commons-io>
@@ -94,13 +98,13 @@
         <version.ro.isdc.wro4j>1.7.9</version.ro.isdc.wro4j>
         <version.spring.framework>4.3.14.RELEASE</version.spring.framework>
 
-        <jboss.developer.drupal.url>http://developer-rhdp-drupal.web.stage.ext.phx2.redhat.com/</jboss.developer.drupal.url>
+        <jboss.developer.drupal.url>http://developer-rhdp-drupal.web.stage.ext.phx2.redhat.com/
+        </jboss.developer.drupal.url>
         <linkXRef>false</linkXRef>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
@@ -436,7 +440,7 @@
                 <module>jaxws-addressing</module>
                 <module>jaxws-ejb</module>
                 <module>jaxws-pojo</module>
-                <module>jaxws-retail</module>
+                <!--<module>jaxws-retail</module>-->
                 <module>jsonp</module>
                 <module>kitchensink</module>
                 <module>kitchensink-angularjs</module>
@@ -771,7 +775,8 @@
                 </property>
             </activation>
             <properties>
-                <jboss.developer.drupal.url>http://developer-rhdp-drupal.web.prod.ext.phx2.redhat.com/</jboss.developer.drupal.url>
+                <jboss.developer.drupal.url>http://developer-rhdp-drupal.web.prod.ext.phx2.redhat.com/
+                </jboss.developer.drupal.url>
             </properties>
         </profile>
     </profiles>
